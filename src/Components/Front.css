@@ -1,0 +1,16 @@
+.map1{
+    animation: slide-up 0.5s ease forwards;
+    position: relative;
+}
+
+button{
+    /* 0B5ED7 */
+    height: 5.5vh;
+    width: 75%;
+    border: none;
+    background-color: #0B5ED7;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: #2b62b4;
+}
