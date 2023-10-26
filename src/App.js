@@ -1,4 +1,3 @@
-
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -36,11 +35,8 @@ function App() {
         <Route path="/AdminPage" element={<Admin />} />
       </Routes>
     </div>
+    
 
-    // <div>
-    //   {/* <UseEffect/> */}
-    //   <Practice/>
-    // </div>
 
 
   );

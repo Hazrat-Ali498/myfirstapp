@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
 import Footer from "./FooterPage";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const products = [
   {
@@ -76,31 +78,37 @@ const products = [
   },
 ];
 
-function Men(){
+function Men() {
+
+
   return (
     <div className="container-fluid">
-    <div className="container mt-4">
-      <Row className="mb-4">
-        {products.map((product) => (
-          <Col key={product.id} lg={3} md={4} sm={6} className="mb-4">
-            <Card style={{ width: "17rem" }}>
-              <Card.Img variant="top" src={product.image} alt={product.name} />
-              <Card.Body>
-                <Card.Title>{product.name}</Card.Title>
-                <Card.Text>
-                  <p>Price: ${product.price}</p>
-                  <p>Brand: {product.brand}</p>
-                </Card.Text>
-                <Button variant="primary">Add to Cart</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <div className="container mt-4">
+        <Row className="mb-4">
+          {products.map((product) => (
+            <Col key={product.id} lg={3} md={4} sm={6} className="mb-4">
+              <Card style={{ width: "17rem" }}>
+                <Card.Img
+                  variant="top"
+                  src={product.image}
+                  alt={product.name}
+                />
+                <Card.Body>
+                  <Card.Title>{product.name}</Card.Title>
+                  <Card.Text>
+                    <p>Price: ${product.price}</p>
+                    <p>Brand: {product.brand}</p>
+                  </Card.Text>
+                  <Button variant="primary">Add to Cart</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+      <Footer />
     </div>
-    <Footer/>
-  </div>
   );
-};
+}
 
 export default Men;

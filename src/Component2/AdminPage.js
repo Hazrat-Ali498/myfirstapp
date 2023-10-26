@@ -1,13 +1,12 @@
-import { Route, Routes } from "react-router-dom";
 import Add_Form from "./Add_Form";
 import Update_Form from "./Update_Form";
 import View_Form from "./View_Form";
 import Delete_Form from "./Delete_Form";
-
 import React, { useState } from "react";
-
 import Header from "./Ad_Header";
 import Ad_Menu from "./Ad_Menu";
+import Order from "./Orders";
+import Customer from "./Customer";
 
 function Admin() {
   const [ selectCategory, setSelectCategory ] = useState('');
@@ -36,6 +35,8 @@ function Admin() {
         {selectCategory === "Update Product" && <Update_Form />}
         {selectCategory === "View Product" && <View_Form />}
         {selectCategory === "Delete Product" && <Delete_Form />}
+        {selectCategory == "Order" && <Order/>}
+        {selectCategory == "Customer" && <Customer/>}
         
         </div>
       </div>

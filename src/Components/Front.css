@@ -1,16 +1,31 @@
-.map1{
-    animation: slide-up 0.5s ease forwards;
-    position: relative;
-}
-
-button{
+.btn1{
     /* 0B5ED7 */
     height: 5.5vh;
     width: 75%;
     border: none;
     background-color: #0B5ED7;
     border-radius: 10px;
+    color: white;
 }
-button:hover{
-    background-color: #2b62b4;
+.btn1:hover{
+    background-color: #0066ff00;
+    border: 1px solid black;
+    color: black;
+}
+
+
+.btn2{
+    /* 0B5ED7 */
+    margin-left: 170px;
+    height: 5.5vh;
+    width: 75%;
+    border: none;
+    background-color: #0B5ED7;
+    border-radius: 10px;
+    color: white;
+}
+.btn2:hover{
+    background-color: #0066ff00;
+    border: 1px solid black;
+    color: black;
 }

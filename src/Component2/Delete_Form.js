@@ -1,6 +1,15 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 function Delete_Form() {
+
+  const Ref= useRef(null);
+
+  useEffect(()=>{
+    Ref.current.focus();
+  },[]);
+
   const [product, setProduct] = useState({
     productId: "",
     productName: "",
@@ -45,7 +54,7 @@ function Delete_Form() {
             value={product.productId}
             onChange={handleInputChange}
             required
-            style={{width:"100%",padding:"8px",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
+            style={{width:"100%",padding:"8px",border: "1px solid #ccc",boxSizing: "border-box",outline: "none",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
           />
         </div>
         <div className="form-group" style={{ marginBottom: "15px" }}> 
@@ -57,19 +66,20 @@ function Delete_Form() {
             value={product.productName}
             onChange={handleInputChange}
             required
-            style={{width:"100%",padding:"8px",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
+            style={{width:"100%",padding:"8px",border: "1px solid #ccc",boxSizing: "border-box",outline: "none",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
           />
         </div>
         <div className="form-group" style={{ marginBottom: "15px" }}>
           <label htmlFor="productPrice" style={{ display: "block", fontWeight: "bold" }}>Product Price:</label>
           <input
+          ref={Ref}
             type="Number"
             id="productPrice"
             name="productPrice"
             value={product.productPrice}
             onChange={handleInputChange}
             required
-            style={{width:"100%",padding:"8px",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
+            style={{width:"100%",padding:"8px",border: "1px solid #ccc",boxSizing: "border-box",outline: "none",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
           />
         </div>
         <div className="form-group" style={{ marginBottom: "15px" }}>
@@ -81,7 +91,7 @@ function Delete_Form() {
             value={product.productImage}
             onChange={handleInputChange}
             required
-            style={{width:"100%",padding:"8px",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
+            style={{width:"100%",padding:"8px",border: "1px solid #ccc",boxSizing: "border-box",outline: "none",fontSize:"14px",border:"1px solid #ccc",borderRadius:"3px",boxSizing:"border-box"}}
           />
         </div>
         <button type="submit" style={{backgroundColor:"#4caf50",color:"white",border:"none",borderRadius:"3px",padding:"10px 20px",cursor:"pointer"}}>Delete Product</button>

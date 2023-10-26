@@ -79,11 +79,11 @@ function Footer() {
           <h6 style={{ marginLeft: "10px", color: "#4e4e4e" }}>COMPANY</h6>
           <ul className="nav nav-pills flex-column mt-4">
             <a
-              href="#"
+              href="/About"
               className="text-decoration-none"
               style={{ color: "black", marginLeft: "10px" }}
             >
-              <li>About Us</li>
+              <li>About</li>
             </a>
 
             <a
@@ -182,7 +182,7 @@ function Footer() {
         </div>
       </div>
       <hr></hr>
-      <p className="mt-5 mb-5" style={{textAlign:"center"}}>&#169; 2023 Elite Heaven All Rights Reserved</p>
+      <p className="mt-5" style={{textAlign:"center"}}>&#169; 2023 Elite Heaven All Rights Reserved</p>
     </div>
   );
 }

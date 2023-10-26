@@ -72,13 +72,13 @@ function Ad_Menu(props) {
               <li className="nav-item py-2 py-sm-0">
                 <a href="#" className="nav-link text-white">
                   <i className="fs-5 fa fa-clipboard"></i>
-                  <span className="fs-4 d-none ms-3 d-sm-inline">Orders</span>
+                  <span className="fs-4 d-none ms-3 d-sm-inline" onClick={()=> props.select("Order")}>Orders</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="nav-link text-white">
                   <i className="fs-5 fa fa-users"></i>
-                  <span className="fs-4 d-none ms-3 d-sm-inline">
+                  <span className="fs-4 d-none ms-3 d-sm-inline" onClick={()=> props.select("Customer")}>
                     Customers
                   </span>
                 </a>
